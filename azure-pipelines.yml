@@ -4,18 +4,24 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+    branches:
+        include:
+            - master
 
 pool:
-  vmImage: ubuntu-latest
+    vmImage: ubuntu-latest
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+variables:
+  System.Debug: true
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+jobs:
+  - job: "ScaScan"
+    displayName: "WhiteSource SCA Scan"
+    continueOnError: true
+    timeoutInMinutes: 10
+    variables:
+      WS_LOG_LEVEL: DEBUG
+    steps:
+        - task: WhiteSource@21
+          inputs:
+            cwd: '$(Agent.BuildDirectory)/s/src'
