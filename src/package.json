@@ -1,0 +1,35 @@
+{
+  "name": "empty-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "private",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "aws-sdk": "^2.2.44",
+    "body-parser": "^1.2.1",
+    "chai": "^1.8.1",
+    "core-js": "^3.4.0",
+    "d": "^0.1.1",
+    "events": "^0.1.0",
+    "f-promise": "^1.0.0",
+    "html2canvas": "^0.5.0-alpha",
+    "i-cut": "^2.2.2",
+    "j-gallery": "^0.2.2",
+    "jasmine": "^2.0.1",
+    "k": "^0.1.0",
+    "log4js": "^6.0.0",
+    "lunr": "^0.7.1",
+    "mocha": "^1.17.0",
+    "moment": "^1.5.1",
+    "numbro": "github:highvelocityspace/numbro",
+    "protons": "^1.0.2",
+    "rxjs": "7.5.2",
+    "underscore": "^1.4.4"
+  },
+  "author": ""
+}
