@@ -19,4 +19,4 @@ steps:
     script: |
       wget https://downloads.whitesourcesoftware.com/wss-unified-agent.jar
       wget https://unified-agent.s3.amazonaws.com/wss-unified-agent.config
-      ls -l
+      java -jar wss-unified-agent.jar -c wss-unified-agent.config -d src -apiKey 8bc6944f49b24094b4e22f9b54f7d14252ca186204e9480d9f940c79282a8d9c -projectToken bc0126051b084f8c93ee7529beb1fea9a697c12ff7eb4a0aa43a6efb1ceacb7a
