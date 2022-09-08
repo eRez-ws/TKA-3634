@@ -19,4 +19,4 @@ steps:
     script: |
       curl https://downloads.whitesourcesoftware.com/wss-unified-agent.jar
       curl https://unified-agent.s3.amazonaws.com/wss-unified-agent.config
-      ls -l
+      echo ls -l
