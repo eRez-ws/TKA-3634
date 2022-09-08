@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      curl https://downloads.whitesourcesoftware.com/wss-unified-agent.jar
+      curl https://unified-agent.s3.amazonaws.com/wss-unified-agent.config
+      ls -l
