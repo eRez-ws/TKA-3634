@@ -17,6 +17,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      curl https://downloads.whitesourcesoftware.com/wss-unified-agent.jar
-      curl https://unified-agent.s3.amazonaws.com/wss-unified-agent.config
-      echo ls -l
+      wget https://downloads.whitesourcesoftware.com/wss-unified-agent.jar
+      wget https://unified-agent.s3.amazonaws.com/wss-unified-agent.config
+      ls -l
